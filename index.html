@@ -11,7 +11,7 @@
   <body>
     <section>
       <div class="container">
-        <div class="img_box" data-next="1" data-prve="0">
+        <div class="img_box" data-next="1" data-prve="0" data-cur="1">
           <div class="img">
             <div class="img_itself1"></div>
           </div>
@@ -43,41 +43,43 @@
     </section>
   </body>
   <script>
-    var auto;
-    function slidePlay() {
-      const dataAuto = document.querySelector(".img_box");
-      var nextAuto = (dataAuto.getAttribute("data-next") % 6) + 1;
-      dataAuto.setAttribute("data-next", nextAuto);
-    }
-    function nextBtn() {
-      const data = document.querySelector(".img_box");
-      var next = (data.getAttribute("data-next") % 6) + 1;
-      data.setAttribute("data-next", next);
-      slideStop();
-      slideAuto();
-    }
-    function prveBtn() {
-      const data = document.querySelector(".img_box");
-      var prve = data.getAttribute("data-next") - (1 % 6);
-      if (prve === 0) {
-        prve = 6;
-      }
-      data.setAttribute("data-next", prve);
-      slideStop();
-      slideAuto();
-    }
+    var auto, data, next, prve;
+    //setIntval
     function slideAuto() {
-      auto = setInterval(slidePlay, 4000);
+      auto = setInterval(slideNext, 4000);
     }
     function slideStop() {
       clearInterval(auto);
     }
+    //slide next
+    function slideNext() {
+      data = document.querySelector(".img_box");
+      next = (data.getAttribute("data-cur") % 6) + 1;
+      data.setAttribute("data-next", next);
+      data.setAttribute("data-prve", 0);
+      data.setAttribute("data-cur", next);
+    }
+    //slide prve
+    function slidePrve(){
+      data = document.querySelector(".img_box");
+      prve = data.getAttribute("data-cur") - (1 % 6);
+      if (prve === 0) {
+        prve = 6;
+      }
+      data.setAttribute("data-prve", prve);
+      data.setAttribute("data-next", 0);
+      data.setAttribute("data-cur", prve);
+    }
     $(document).ready(function () {
       $(".next_btn_box").click(function () {
-        nextBtn();
+        slideNext();
+        slideStop();
+        slideAuto();
       });
       $(".prve_btn_box").click(function () {
-        prveBtn();
+        slidePrve();
+        slideStop();
+        slideAuto();
       });
       slideAuto();
     });
