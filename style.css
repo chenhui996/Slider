@@ -156,7 +156,7 @@ i{
 }
 
 /* data-1 */
-[data-slide="1"] .img:nth-child(1) {
+[data-next="1"] .img:nth-child(1) {
   /* active animetion */
   position: absolute;
   top: calc(360px - 83vh);
@@ -167,27 +167,27 @@ i{
   animation: active 1.3s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="1"] .img:nth-child(2) {
+[data-next="1"] .img:nth-child(2) {
   left: 0;
   animation: img1-2 1.3s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="1"] .img:nth-child(3) {
+[data-next="1"] .img:nth-child(3) {
   left: 280px;
   animation: img1-3 1.6s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="1"] .img:nth-child(4) {
+[data-next="1"] .img:nth-child(4) {
   left: 560px;
   animation: img1-4 1.9s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="1"] .img:nth-child(5) {
+[data-next="1"] .img:nth-child(5) {
   left: 840px;
   animation: img1-5 2.2s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="1"] .img:nth-child(6) {
+[data-next="1"] .img:nth-child(6) {
   left: 1120px;
   animation: img1-6 2.2s;
   z-index: 0;
@@ -196,7 +196,7 @@ i{
 }
 
 /* data-2 */
-[data-slide="2"] .img:nth-child(2) {
+[data-next="2"] .img:nth-child(2) {
   /* active animetion */
   position: absolute;
   top: calc(360px - 83vh);
@@ -207,33 +207,33 @@ i{
   animation: active 1.3s;
   z-index: 1;
 }
-[data-slide="2"] .img:nth-child(3) {
+[data-next="2"] .img:nth-child(3) {
   left: 0;
   animation-name: img1-2;
   animation-duration: 1.3s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
   z-index: 2;
 }
-[data-slide="2"] .img:nth-child(4) {
+[data-next="2"] .img:nth-child(4) {
   left: 280px;
   animation-name: img1-3;
   animation-duration: 1.6s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
   z-index: 3;
 }
-[data-slide="2"] .img:nth-child(5) {
+[data-next="2"] .img:nth-child(5) {
   left: 560px;
   animation: img1-4 1.9s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
   z-index: 4;
 }
-[data-slide="2"] .img:nth-child(6) {
+[data-next="2"] .img:nth-child(6) {
   left: 840px;
   animation: img1-5 2.2s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
   z-index: 5;
 }
-[data-slide="2"] .img:nth-child(1) {
+[data-next="2"] .img:nth-child(1) {
   left: 1120px;
   animation: img1-6 2.2s;
   z-index: 0;
@@ -242,7 +242,7 @@ i{
 }
 
 /* data-3 */
-[data-slide="3"] .img:nth-child(3) {
+[data-next="3"] .img:nth-child(3) {
   /* active animetion */
   position: absolute;
   top: calc(360px - 83vh);
@@ -253,31 +253,31 @@ i{
   animation: active 1.3s;
   z-index: 1;
 }
-[data-slide="3"] .img:nth-child(4) {
+[data-next="3"] .img:nth-child(4) {
   left: 0;
   animation: img1-2 1.3s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
   z-index: 2;
 }
-[data-slide="3"] .img:nth-child(5) {
+[data-next="3"] .img:nth-child(5) {
   left: 280px;
   animation: img1-3 1.6s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
   z-index: 3;
 }
-[data-slide="3"] .img:nth-child(6) {
+[data-next="3"] .img:nth-child(6) {
   left: 560px;
   animation: img1-4 1.9s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
   z-index: 4;
 }
-[data-slide="3"] .img:nth-child(1) {
+[data-next="3"] .img:nth-child(1) {
   left: 840px;
   animation: img1-5 2.2s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
   z-index:5;
 }
-[data-slide="3"] .img:nth-child(2) {
+[data-next="3"] .img:nth-child(2) {
   left: 1120px;
   animation: img1-6 2.2s;
   z-index: 0;
@@ -286,7 +286,7 @@ i{
 }
 
 /* data-4 */
-[data-slide="4"] .img:nth-child(4) {
+[data-next="4"] .img:nth-child(4) {
   z-index: 1;
   /* active animetion */
   position: absolute;
@@ -297,31 +297,31 @@ i{
   border-radius: 0px;
   animation: active 1.3s;
 }
-[data-slide="4"] .img:nth-child(5) {
+[data-next="4"] .img:nth-child(5) {
   z-index: 2;
   left: 0;
   animation: img1-2 1.3s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="4"] .img:nth-child(6) {
+[data-next="4"] .img:nth-child(6) {
   z-index: 3;
   left: 280px;
   animation: img1-3 1.6s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="4"] .img:nth-child(1) {
+[data-next="4"] .img:nth-child(1) {
   z-index:4;
   left: 560px;
   animation: img1-4 1.9s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="4"] .img:nth-child(2) {
+[data-next="4"] .img:nth-child(2) {
   z-index: 5;
   left: 840px;
   animation: img1-5 2.2s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="4"] .img:nth-child(3) {
+[data-next="4"] .img:nth-child(3) {
   left: 1120px;
   animation: img1-6 2.2s;
   z-index: 0;
@@ -330,7 +330,7 @@ i{
 }
 
 /* data-5 */
-[data-slide="5"] .img:nth-child(5) {
+[data-next="5"] .img:nth-child(5) {
   z-index: 1;
   /* active animetion */
   position: absolute;
@@ -341,31 +341,31 @@ i{
   border-radius: 0px;
   animation: active 1.3s;
 }
-[data-slide="5"] .img:nth-child(6) {
+[data-next="5"] .img:nth-child(6) {
   z-index: 2;
   left: 0;
   animation: img1-2 1.3s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="5"] .img:nth-child(1) {
+[data-next="5"] .img:nth-child(1) {
   z-index: 3;
   left: 280px;
   animation: img1-3 1.6s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="5"] .img:nth-child(2) {
+[data-next="5"] .img:nth-child(2) {
   z-index: 4;
   left: 560px;
   animation: img1-4 1.9s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="5"] .img:nth-child(3) {
+[data-next="5"] .img:nth-child(3) {
   z-index: 5;
   left: 840px;
   animation: img1-5 2.2s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="5"] .img:nth-child(4) {
+[data-next="5"] .img:nth-child(4) {
   left: 1120px;
   animation: img1-6 2.2s;
   z-index: 0;
@@ -374,7 +374,7 @@ i{
 }
 
 /* data-t *6 */
-[data-slide="6"] .img:nth-child(6) {
+[data-next="6"] .img:nth-child(6) {
   /* active animetion */
   z-index: 1;
   position: absolute;
@@ -385,31 +385,31 @@ i{
   border-radius: 0px;
   animation: active 1.3s;
 }
-[data-slide="6"] .img:nth-child(1) {
+[data-next="6"] .img:nth-child(1) {
   z-index: 2;
   left: 0;
   animation: img1-2 1.3s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="6"] .img:nth-child(2) {
+[data-next="6"] .img:nth-child(2) {
   z-index: 3;
   left: 280px;
   animation: img1-3 1.6s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="6"] .img:nth-child(3) {
+[data-next="6"] .img:nth-child(3) {
   z-index: 4;
   left: 560px;
   animation: img1-4 1.9s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="6"] .img:nth-child(4) {
+[data-next="6"] .img:nth-child(4) {
   z-index: 5;
   left: 840px;
   animation: img1-5 2.2s;
   animation-timing-function: cubic-bezier(0.6, 0.11, 0.21, 1.01);
 }
-[data-slide="6"] .img:nth-child(5) {
+[data-next="6"] .img:nth-child(5) {
   left: 1120px;
   animation: img1-6 2.2s;
   z-index: 0;
