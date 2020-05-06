@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document2</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="img_box" data-slide="1" >
+          <div class="img">
+            <div class="img_itself1"></div>
+          </div>
+          <div class="img">
+            <div class="img_itself2"></div>
+          </div>
+          <div class="img">
+            <div class="img_itself3"></div>
+          </div>
+          <div class="img">
+            <div class="img_itself4"></div>
+          </div>
+          <div class="img">
+            <div class="img_itself5"></div>
+          </div>
+          <div class="img">
+            <div class="img_itself6"></div>
+          </div>
+        </div>
+        <div class="page_box">
+          <div class="prve_btn_box">
+            <i class="fa fa-angle-left fa-2x"></i>
+          </div>
+          <div class="next_btn_box">
+            <i class="fa fa-angle-right fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    var auto;
+    function slidePlay(){
+      const dataAuto = document.querySelector(".img_box");
+      var nextAuto = dataAuto.getAttribute("data-slide") % 6 + 1;
+      dataAuto.setAttribute('data-slide', nextAuto);
+    }
+    function slideAuto(){
+      auto = setInterval(slidePlay,4000);
+    }
+    function slideStop(){
+      clearInterval(auto);
+    }
+
+    $(document).ready(function(){
+      $(".next_btn_box").click(function(){
+        const data = document.querySelector(".img_box");
+        var next = data.getAttribute("data-slide") % 6 + 1;
+        data.setAttribute('data-slide', next);
+        slideStop();
+        slideAuto();
+      })
+      $(".prve_btn_box").click(function(){
+        const data = document.querySelector(".img_box");
+        var prve = data.getAttribute("data-slide") - 1 % 6;
+        if(prve === 0){
+          prve = 6;
+        }
+        data.setAttribute('data-slide', prve);
+        slideStop();
+        slideAuto();
+      })
+    });
+    slideAuto();
+  </script>
+</html>
