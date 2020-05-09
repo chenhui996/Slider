@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <link
+      href="http://cdn.repository.webfont.com/webfonts/nomal/138080/47606/5eb3d2c5f629d809200c5c79.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://cdn.repository.webfont.com/webfonts/nomal/138080/47103/5eb3d24df629d809200c5c77.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://cdn.repository.webfont.com/webfonts/nomal/138080/47019/5eb62f6cf629d80d70ecdef1.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="http://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"
+    ></script>
+    <script type="text/javascript">
+      $webfont.load(
+        "h1",
+        "e1c7067538e74a029765929cb4d98567",
+        "Source-Han-Sans-Medium"
+      );
+      $webfont.load(
+        "#text_normal",
+        "e8b3c46d58404d39930f649584af38eb",
+        "Source-Han-Normal"
+      );
+      $webfont.load(
+        "#btn",
+        "f686d9d5c62b401c89a4db6485cd6d39",
+        "Source-Han-Light"
+      );
+      $webfont.draw();
+    </script>
   </head>
   <body>
     <section>
@@ -30,13 +67,32 @@
           <div class="img">
             <div class="img_itself6"></div>
           </div>
-        </div>
-        <div class="page_box">
-          <div class="prve_btn_box">
-            <i class="fa fa-angle-left fa-2x"></i>
+          <div class="page_box">
+            <div class="prve_btn_box">
+              <i class="fa fa-angle-left fa-2x"></i>
+            </div>
+            <div class="next_btn_box">
+              <i class="fa fa-angle-right fa-2x"></i>
+            </div>
+            <div class="pageline_box">
+              <div class="pageline"></div>
+            </div>
+            <p id="slide_number" class="slide_page">01</p>
           </div>
-          <div class="next_btn_box">
-            <i class="fa fa-angle-right fa-2x"></i>
+          <div class="anime_line_box">
+            <div class="anime_line"></div>
+          </div>
+          <div class="slide_txt_main">
+            <div class="slide_txt_box slide_txt1">
+              <div class="slide_txt_line"></div>
+              <p class="slide_txt_data">2020 - 04 - 22</p>
+              <h1>气候危机</h1>
+              <h1>没有疫苗</h1>
+              <p id="text_normal" class="slide_text">
+                病毒导致的全球疫情最终可以通过疫苗研发来解<br />决，然而当气候和生态危机不可逆转的爆发时，<br />人类却拿不出疫苗，只能听任文明陷入浩劫。
+              </p>
+              <button id="btn" class="slide_btn_more">了解更多</button>
+            </div>
           </div>
         </div>
       </div>
@@ -58,9 +114,10 @@
       data.setAttribute("data-next", next);
       data.setAttribute("data-prve", 0);
       data.setAttribute("data-cur", next);
+      document.getElementById("slide_number").innerHTML = "0" + next;
     }
     //slide prve
-    function slidePrve(){
+    function slidePrve() {
       data = document.querySelector(".img_box");
       prve = data.getAttribute("data-cur") - (1 % 6);
       if (prve === 0) {
@@ -69,7 +126,9 @@
       data.setAttribute("data-prve", prve);
       data.setAttribute("data-next", 0);
       data.setAttribute("data-cur", prve);
+      document.getElementById("slide_number").innerHTML = "0" + prve;
     }
+    //trigger
     $(document).ready(function () {
       $(".next_btn_box").click(function () {
         slideNext();
