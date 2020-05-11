@@ -4,7 +4,7 @@
   letter-spacing: 1px;
 }
 h1 {
-  font-size: 74px;
+  font-size: 70px;
   color: #fff;
   line-height: 1.4em;
 }
@@ -15,6 +15,7 @@ p {
 .slide_text {
   color: #fff;
   margin-top: 30px;
+  /* height: 108px; */
 }
 
 .slide_txt_line {
@@ -57,7 +58,7 @@ i {
 }
 .slide_txt_box {
   position: absolute;
-  left: 120px;
+  left: 11vh;
   bottom: 15vh;
   /* background-color: orange; */
 }
@@ -172,7 +173,7 @@ i {
 
 .img_itself1 {
   background-position: 0% 100%;
-  opacity: 0.9;
+  opacity: 1.0;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -181,7 +182,7 @@ i {
 }
 .img_itself2 {
   background-position: 70% 0%;
-  opacity: 0.9;
+  opacity: 1.0;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -190,7 +191,7 @@ i {
 }
 .img_itself3 {
   background-position: 50% 100%;
-  opacity: 0.9;
+  opacity: 1.0;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -199,7 +200,7 @@ i {
 }
 .img_itself4 {
   background-position: 30% 70%;
-  opacity: 0.9;
+  opacity: 1.0;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -208,7 +209,7 @@ i {
 }
 .img_itself5 {
   background-position: 10% 40%;
-  opacity: 0.9;
+  opacity: 1.0;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -217,7 +218,7 @@ i {
 }
 .img_itself6 {
   background-position: 70% 70%;
-  opacity: 0.9;
+  opacity: 1.0;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -1162,12 +1163,12 @@ i {
 }
 .txt_anime1 {
   transform: rotate(0deg) scale(1) translate(0px, 110%);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-delay: 1.3s;
 }
 .txt_anime2 {
   transform: rotate(0deg) scale(1) translate(0px, 110%);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-delay: 1.35s;
 }
 .txt_anime3 {
@@ -1177,18 +1178,25 @@ i {
 }
 .txt_anime4 {
   transform: rotate(0deg) scale(1) translate(0px, 110%);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-delay: 1.45s;
 }
+
 .txt_anime5 {
   transform: rotate(0deg) scale(1) translate(0px, 110%);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-delay: 1.50s;
 }
 .txt_anime6 {
   transform: rotate(0deg) scale(1) translate(0px, 110%);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-delay: 1.55s;
+}
+
+.txt_anime4_1 {
+  transform: rotate(0deg) scale(1) translate(0px, 110%);
+  transition-duration: 0.3s;
+  transition-delay: 1.45s;
 }
 
 
@@ -1315,4 +1323,9 @@ i {
 }
 [data-prve="6"] .slide_txt6 .opa_full {
   opacity: 1;
+}
+
+
+.custom_left{
+  margin-left: -4vh;
 }
