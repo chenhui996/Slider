@@ -38,7 +38,7 @@
         "Source-Han-Normal"
       );
       $webfont.load(
-        "#btn",
+        "#slide_btn",
         "f686d9d5c62b401c89a4db6485cd6d39",
         "Source-Han-Light"
       );
@@ -83,15 +83,55 @@
             <div class="anime_line"></div>
           </div>
           <div class="slide_txt_main">
+            <!-- txt_slide1 -->
             <div class="slide_txt_box slide_txt1">
-              <div class="slide_txt_line"></div>
-              <p class="slide_txt_data">2020 - 04 - 22</p>
-              <h1>气候危机</h1>
-              <h1>没有疫苗</h1>
-              <p id="text_normal" class="slide_text">
-                病毒导致的全球疫情最终可以通过疫苗研发来解<br />决，然而当气候和生态危机不可逆转的爆发时，<br />人类却拿不出疫苗，只能听任文明陷入浩劫。
-              </p>
-              <button id="btn" class="slide_btn_more">了解更多</button>
+              <div class="txt_anime_box">
+                <div class="slide_txt_line txt_anime1"></div>
+              </div>
+              <div class="txt_anime_box">
+                <p class="slide_txt_data txt_anime2">2020 - 04 - 22</p>
+              </div>
+              <div class="txt_anime_box">
+                <h1 class="txt_anime3">气候危机</h1>
+              </div>
+              <div class="txt_anime_box">
+                <h1 class="txt_anime4">没有疫苗</h1>
+              </div>
+              <div class="txt_anime_box">
+                <div class="txt_anime5">
+                  <p id="text_normal" class="slide_text">
+                    病毒导致的全球疫情最终可以通过疫苗研发来解<br />决，然而当气候和生态危机不可逆转的爆发时，<br />人类却拿不出疫苗，只能听任文明陷入浩劫。
+                  </p>
+                </div>
+              </div>
+              <button id="slide_btn" class="slide_btn_more txt_anime6">
+                了解更多
+              </button>
+            </div>
+            <!-- txt_slide2 -->
+            <div class="slide_txt_box slide_txt2">
+              <div class="txt_anime_box">
+                <div class="slide_txt_line txt_anime1"></div>
+              </div>
+              <div class="txt_anime_box">
+                <p class="slide_txt_data txt_anime2">2020 - 04 - 22</p>
+              </div>
+              <div class="txt_anime_box">
+                <h1 class="txt_anime3">远景发力</h1>
+              </div>
+              <div class="txt_anime_box">
+                <h1 class="txt_anime4">「机器社交」操作系统</h1>
+              </div>
+              <div class="txt_anime_box">
+                <div class="txt_anime5">
+                  <p id="text_normal" class="slide_text">
+                    2019 远景科技创新日，发布新机器战略，提出“网络定义机器”
+                  </p>
+                </div>
+              </div>
+              <button id="slide_btn" class="slide_btn_more txt_anime6">
+                了解更多
+              </button>
             </div>
           </div>
         </div>
@@ -102,7 +142,7 @@
     var auto, data, next, prve;
     //setIntval
     function slideAuto() {
-      auto = setInterval(slideNext, 4000);
+      auto = setInterval(slideNext, 6000);
     }
     function slideStop() {
       clearInterval(auto);
@@ -141,6 +181,10 @@
         slideAuto();
       });
       slideAuto();
+      $(
+        ".txt_anime1,.txt_anime2,.txt_anime3,.txt_anime4,.txt_anime5,.txt_anime6"
+      ).addClass("bottom_to_top");
+      $(".txt_anime6").addClass("opa_full");
     });
   </script>
 </html>

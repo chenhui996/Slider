@@ -12,10 +12,15 @@ p {
   line-height: 2em;
   font-size: 18px;
 }
-.slide_text {
-  margin-top: 30px;
+.slide_text{
   color: #fff;
-  margin-bottom: 70px;
+  margin-top: 30px;
+}
+
+.slide_txt_line {
+  height: 5px;
+  width: 44px;
+  background-color: #fff;
 }
 i {
   color: #fff;
@@ -45,7 +50,6 @@ i {
   top: calc(360px - 83vh);
   height: 100vh;
   width: calc(100vw - 1000px);
-  z-index: 100;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -58,7 +62,7 @@ i {
   /* background-color: orange; */
 }
 .slide_txt_line {
-  height: 4px;
+  height: 5px;
   width: 44px;
   background-color: #fff;
 }
@@ -74,7 +78,8 @@ i {
   /* position: absolute; */
   margin-left: 30px;
   right: 7vh;
-  font-size: 5.6vh;
+  font-size: 6.4vh;
+  line-height: 1.2em;
   color: #fff;
   z-index: 10;
   font-family: "DINCond-Medium";
@@ -801,53 +806,53 @@ i {
   left: 0;
 }
 [data-next="1"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line 4s;
+  animation-timing-function: linear;
+  animation: anime_line 6s;
 }
 [data-next="2"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line2 4s;
+  animation-timing-function: linear;
+  animation: anime_line2 6s;
 }
 [data-next="3"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line 4s;
+  animation-timing-function: linear;
+  animation: anime_line 6s;
 }
 [data-next="4"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line2 4s;
+  animation-timing-function: linear;
+  animation: anime_line2 6s;
 }
 [data-next="5"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line 4s;
+  animation-timing-function: linear;
+  animation: anime_line 6s;
 }
 [data-next="6"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line2 4s;
+  animation-timing-function: linear;
+  animation: anime_line2 6s;
 }
 
 [data-prve="1"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line 4s;
+  animation-timing-function: linear;
+  animation: anime_line 6s;
 }
 [data-prve="2"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line2 4s;
+  animation-timing-function: linear;
+  animation: anime_line2 6s;
 }
 [data-prve="3"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line 4s;
+  animation-timing-function: linear;
+  animation: anime_line 6s;
 }
 [data-prve="4"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line2 4s;
+  animation-timing-function: linear;
+  animation: anime_line2 6s;
 }
 [data-prve="5"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line 4s;
+  animation-timing-function: linear;
+  animation: anime_line 6s;
 }
 [data-prve="6"] .anime_line {
-  animation-timing-function: ease;
-  animation: anime_line2 4s;
+  animation-timing-function: linear;
+  animation: anime_line2 6s;
 }
 
 @keyframes anime_line {
@@ -1148,4 +1153,63 @@ i {
   border-radius: 100px;
   padding: 14px 50px;
   border:1px solid rgba(255, 255, 255, 1);
+  margin-top: 70px;
+  opacity: 0;
 }
+
+
+.txt_anime_box{
+  overflow: hidden;
+}
+.txt_anime1{
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-duration: 0.5s;
+  transition-delay: 1.20s;
+}
+.txt_anime2{
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-duration: 0.5s;
+  transition-delay: 1.25s;
+}
+.txt_anime3{
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-duration: 0.5s;
+  transition-delay: 1.30s;
+}
+.txt_anime4{
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-duration: 0.5s;
+  transition-delay: 1.35s;
+}
+.txt_anime5{
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-duration: 0.5s;
+  transition-delay: 1.40s;
+}
+.txt_anime6{
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-duration: 0.5s;
+  transition-delay: 1.45s;
+}
+
+
+[data-next="1"] .slide_txt1 .opa_full{
+  opacity: 1;
+}
+[data-next="1"] .slide_txt1 .bottom_to_top{
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+}
+[data-next="1"] .slide_txt1{
+  z-index: 10;
+}
+[data-next="2"] .slide_txt2 .opa_full{
+  opacity: 1;
+}
+[data-next="2"] .slide_txt2 .bottom_to_top{
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+}
+[data-next="2"] .slide_txt2{
+  z-index: 10;
+}
+
+
