@@ -12,7 +12,7 @@ p {
   line-height: 2em;
   font-size: 18px;
 }
-.slide_text{
+.slide_text {
   color: #fff;
   margin-top: 30px;
 }
@@ -46,10 +46,10 @@ i {
 /* slide txt */
 .slide_txt_main {
   position: absolute;
-  left: calc(1000px - 100vw);
-  top: calc(360px - 83vh);
+  left: 0;
+  top: 0;
   height: 100vh;
-  width: calc(100vw - 1000px);
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -57,7 +57,7 @@ i {
 }
 .slide_txt_box {
   position: absolute;
-  left:120px;
+  left: 120px;
   bottom: 15vh;
   /* background-color: orange; */
 }
@@ -134,7 +134,7 @@ i {
   position: absolute;
   /* float: left; */
   background-color: black;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .img:nth-child(1) {
@@ -899,7 +899,7 @@ i {
     left: calc(1000px - 100vw);
     width: 100vw;
     height: 100vh;
-    border-radius: 8px;
+    border-radius: 10px;
   }
 }
 
@@ -969,7 +969,7 @@ i {
     left: calc(1000px - 100vw);
     width: 100vw;
     height: 100vh;
-    border-radius: 8px;
+    border-radius: 10px;
   }
   100% {
     height: 360px;
@@ -977,7 +977,7 @@ i {
     margin-right: 30px;
     left: 0px;
     top: 0px;
-    border-radius: 8px;
+    border-radius: 10px;
   }
 }
 
@@ -1148,68 +1148,171 @@ i {
 
 .slide_btn_more {
   font-size: 18px;
-  color:#fff;
+  color: #fff;
   background-color: transparent;
   border-radius: 100px;
   padding: 14px 50px;
-  border:1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
   margin-top: 70px;
   opacity: 0;
 }
 
-
-.txt_anime_box{
+.txt_anime_box {
   overflow: hidden;
 }
-.txt_anime1{
-  transform: rotate(0deg) scale(1) translate(0px, 100%);
+.txt_anime1 {
+  transform: rotate(0deg) scale(1) translate(0px, 110%);
   transition-duration: 0.5s;
-  transition-delay: 1.20s;
+  transition-delay: 1.3s;
 }
-.txt_anime2{
-  transform: rotate(0deg) scale(1) translate(0px, 100%);
-  transition-duration: 0.5s;
-  transition-delay: 1.25s;
-}
-.txt_anime3{
-  transform: rotate(0deg) scale(1) translate(0px, 100%);
-  transition-duration: 0.5s;
-  transition-delay: 1.30s;
-}
-.txt_anime4{
-  transform: rotate(0deg) scale(1) translate(0px, 100%);
+.txt_anime2 {
+  transform: rotate(0deg) scale(1) translate(0px, 110%);
   transition-duration: 0.5s;
   transition-delay: 1.35s;
 }
-.txt_anime5{
-  transform: rotate(0deg) scale(1) translate(0px, 100%);
+.txt_anime3 {
+  transform: rotate(0deg) scale(1) translate(0px, 110%);
   transition-duration: 0.5s;
   transition-delay: 1.40s;
 }
-.txt_anime6{
-  transform: rotate(0deg) scale(1) translate(0px, 100%);
+.txt_anime4 {
+  transform: rotate(0deg) scale(1) translate(0px, 110%);
   transition-duration: 0.5s;
   transition-delay: 1.45s;
 }
-
-
-[data-next="1"] .slide_txt1 .opa_full{
-  opacity: 1;
+.txt_anime5 {
+  transform: rotate(0deg) scale(1) translate(0px, 110%);
+  transition-duration: 0.5s;
+  transition-delay: 1.50s;
 }
-[data-next="1"] .slide_txt1 .bottom_to_top{
+.txt_anime6 {
+  transform: rotate(0deg) scale(1) translate(0px, 110%);
+  transition-duration: 0.5s;
+  transition-delay: 1.55s;
+}
+
+
+[data-next="1"] .slide_txt1 .bottom_to_top {
   transform: rotate(0deg) scale(1) translate(0px, 0%);
 }
-[data-next="1"] .slide_txt1{
-  z-index: 10;
-}
-[data-next="2"] .slide_txt2 .opa_full{
+[data-next="1"] .slide_txt1 .opa_full {
   opacity: 1;
 }
-[data-next="2"] .slide_txt2 .bottom_to_top{
+
+
+[data-next="2"] .slide_txt2 .bottom_to_top {
   transform: rotate(0deg) scale(1) translate(0px, 0%);
 }
-[data-next="2"] .slide_txt2{
-  z-index: 10;
+[data-next="2"] .slide_txt2 .opa_full {
+  opacity: 1;
 }
 
 
+[data-next="3"] .slide_txt3 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+}
+[data-next="3"] .slide_txt3 .opa_full {
+  opacity: 1;
+}
+
+
+[data-next="4"] .slide_txt4 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+}
+[data-next="4"] .slide_txt4 .opa_full {
+  opacity: 1;
+}
+
+
+[data-next="5"] .slide_txt5 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+}
+[data-next="5"] .slide_txt5 .opa_full {
+  opacity: 1;
+}
+
+
+[data-next="6"] .slide_txt6 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+}
+[data-next="6"] .slide_txt6 .opa_full {
+  opacity: 1;
+}
+
+/* prve slide1 text */
+[data-prve="1"] .slide_txt1 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+  transition-delay: 1.2s;
+}
+[data-prve="1"] .slide_txt2 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-delay: 0s;
+}
+[data-prve="1"] .slide_txt1 .opa_full {
+  opacity: 1;
+}
+
+/* prve slide2 text */
+[data-prve="2"] .slide_txt2 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+  transition-delay: 1.2s;
+}
+[data-prve="2"] .slide_txt3 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-delay: 0s;
+}
+[data-prve="2"] .slide_txt2 .opa_full {
+  opacity: 1;
+}
+
+/* prve slide3 text */
+[data-prve="3"] .slide_txt3 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+  transition-delay: 1.2s;
+}
+[data-prve="3"] .slide_txt4 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-delay: 0s;
+}
+[data-prve="3"] .slide_txt3 .opa_full {
+  opacity: 1;
+}
+
+/* prve slide4 text */
+[data-prve="4"] .slide_txt4 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+  transition-delay: 1.2s;
+}
+[data-prve="4"] .slide_txt5 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-delay: 0s;
+}
+[data-prve="4"] .slide_txt4 .opa_full {
+  opacity: 1;
+}
+
+/* prve slide5 text */
+[data-prve="5"] .slide_txt5 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+  transition-delay: 1.2s;
+}
+[data-prve="5"] .slide_txt6 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-delay: 0s;
+}
+[data-prve="5"] .slide_txt5 .opa_full {
+  opacity: 1;
+}
+
+/* prve slide6 text */
+[data-prve="6"] .slide_txt6 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 0%);
+  transition-delay: 1.2s;
+}
+[data-prve="6"] .slide_txt1 .bottom_to_top {
+  transform: rotate(0deg) scale(1) translate(0px, 100%);
+  transition-delay: 0s;
+}
+[data-prve="6"] .slide_txt6 .opa_full {
+  opacity: 1;
+}
