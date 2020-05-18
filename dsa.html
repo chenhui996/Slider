@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>滚动事件</title>
+		<style>
+			div{
+				height:2000px;
+				
+			}
+			button{
+				position:fixed;
+				bottom: 100px;
+				right: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<button class="btn">去那里</button>
+	
+	
+		</div>
+		
+		<script>
+			var button=document.querySelector("button");
+			
+			button.onclick=function(){
+				var id=setInterval(function(){
+					if(document.documentElement.scrollTop>0)
+					{
+						document.documentElement.scrollTop-=100;
+						
+						//当滑动条距顶部为0时,结束间隔任务
+						if(document.documentElement.scrollTop==0)
+						{
+							clearInterval(id);
+						}
+					}
+				},500);
+				
+			}
+			
+		</script>
+	</body>
+</html>

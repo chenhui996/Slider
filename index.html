@@ -345,11 +345,11 @@
           <div class="page_box">
             <div class="prve_btn_box">
               <i class="fa fa-angle-left fa-2x"></i>
-              <a href="#"></a>
+              <!-- <a href="#"></a> -->
             </div>
             <div class="next_btn_box">
               <i class="fa fa-angle-right fa-2x"></i>
-              <a href="#"></a>
+              <!-- <a href="#"></a> -->
             </div>
             <div class="pageline_box">
               <div class="pageline"></div>
@@ -360,37 +360,72 @@
             <div class="anime_line"></div>
           </div>
         </div>
-        <div class="guide_arrow"></div>
+        <div id="guide_arrow" class="guide_arrow"></div>
       </div>
     </section>
     <section>
       <div class="main_container">
-        <div class="num_main">
-          <h2 class="title_txt">开创美好零碳世界</h2>
+        <!-- num -->
+        <div id="num_main" class="num_main">
+          <div class="txt_anime_box title_txt_box">
+            <h2 class="title_txt">开创美好零碳世界</h2>
+          </div>
           <div class="num_box">
             <div class="num_li_box">
               <div class="num_li">
-                <div class="custom_icon_1"></div>
-                <h3 class="num_title">No.2</h3>
-                <p id="Medium_SanS">中国风机新增装机市场份额</p>
-              </div>
-              <div class="num_li">
-                <div class="custom_icon_2"></div>
-                <h3 class="num_title">Top5</h3>
-                <p id="Medium_SanS">近五年全球动力电池累计出货量</p>
-              </div>
-              <div class="num_li">
-                <div class="custom_icon_3"></div>
-                <h3 class="num_title">120GW</h3>
-                <p id="Medium_SanS">已管理全球能源资产</p>
-              </div>
-              <div class="num_li">
-                <div class="custom_icon_4"></div>
-                <div class="cn_sub_box">
-                  <h3 class="num_title">3400</h3>
-                  <h3 class="num_title cn_sub">万吨</h3>
+                <div class="txt_anime_box">
+                  <div class="custom_icon_1 txt_anime1 num_icon_anime"></div>
                 </div>
-                <p id="Medium_SanS">累计减排CO2量</p>
+                <div class="txt_anime_box">
+                  <h3 class="num_title txt_anime3 num_txt_anime">No.2</h3>
+                </div>
+                <div class="txt_anime_box">
+                  <p id="Medium_SanS" class="txt_anime5 num_txt_anime">
+                    中国风机新增装机市场份额
+                  </p>
+                </div>
+              </div>
+              <div class="num_li">
+                <div class="txt_anime_box">
+                  <div class="custom_icon_2 txt_anime1 num_icon_anime"></div>
+                </div>
+                <div class="txt_anime_box">
+                  <h3 class="num_title txt_anime3 num_txt_anime">Top5</h3>
+                </div>
+                <div class="txt_anime_box">
+                  <p id="Medium_SanS" class="txt_anime5 num_txt_anime">
+                    近五年全球动力电池累计出货量
+                  </p>
+                </div>
+              </div>
+              <div class="num_li">
+                <div class="txt_anime_box">
+                  <div class="custom_icon_3 txt_anime1 num_icon_anime"></div>
+                </div>
+                <div class="txt_anime_box">
+                  <h3 class="num_title txt_anime3 num_txt_anime">120GW</h3>
+                </div>
+                <div class="txt_anime_box">
+                  <p id="Medium_SanS" class="txt_anime5 num_txt_anime">
+                    已管理全球能源资产
+                  </p>
+                </div>
+              </div>
+              <div class="num_li">
+                <div class="txt_anime_box">
+                  <div class="custom_icon_4 txt_anime1 num_icon_anime"></div>
+                </div>
+                <div class="txt_anime_box">
+                  <div class="cn_sub_box txt_anime3 num_txt_anime">
+                    <h3 class="num_title">3400</h3>
+                    <h3 class="num_title cn_sub">万吨</h3>
+                  </div>
+                </div>
+                <div class="txt_anime_box">
+                  <p id="Medium_SanS" class="txt_anime5 num_txt_anime">
+                    累计减排CO2量
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1024,8 +1059,13 @@
     window.onload = function () {
       setTimeout(() => window.scrollTo(0, 0), 2); // 返回页面顶部
     };
-    var auto, data, next, prve, winScrollTop, aboutTri;
+    var auto, data, next, prve, winScrollTop, aboutTri, numTri;
     var winHeight = $(window).height();
+    // gui arr
+    var guiArr = document.getElementById("guide_arrow");
+    // num
+    var numMain = document.getElementById("num_main");
+    var numHeight = numMain.offsetTop;
     // about
     var aboutMain = document.getElementById("about_main");
     var aboutHeight = aboutMain.offsetTop;
@@ -1045,6 +1085,7 @@
     var fiveMain = document.getElementById("main_five");
     var fiveHeight = fiveMain.offsetTop;
     //winTri
+    var numWinTri = winHeight / 2 + winHeight / 8;
     var aboutWinTri = winHeight / 2 + winHeight / 8;
     var oneWinTri = winHeight / 2;
     var twoWinTri = winHeight / 2;
@@ -1099,6 +1140,8 @@
         ".txt_anime1,.txt_anime2,.txt_anime3,.txt_anime4,.txt_anime5,.txt_anime6,.txt_anime4_1"
       ).addClass("bottom_to_top");
       $(".txt_anime6").addClass("opa_full");
+      // guide_arrow
+
       //scroll
       $(document).scroll(function () {
         winScrollTop = $(document).scrollTop();
@@ -1107,13 +1150,21 @@
         } else {
           $("#nav").removeClass("change_nav");
         }
-        // about
+        // tri height
+        numTri = numHeight - winScrollTop;
         aboutTri = aboutHeight - winScrollTop;
         oneTri = oneHeight - winScrollTop;
         twoTri = twoHeight - winScrollTop;
         threeTri = threeHeight - winScrollTop;
         fourTri = fourHeight - winScrollTop;
         fiveTri = fiveHeight - winScrollTop;
+        // num txt
+        if (numTri - numWinTri <= 0 && numTri - numWinTri > -100) {
+          $(".title_txt,.num_txt_anime,.num_icon_anime").addClass(
+            "bottom_to_top2"
+          );
+        }
+        // about txt
         if (aboutTri - aboutWinTri <= 0 && aboutTri - aboutWinTri > -100) {
           $(".about_txt_anime").addClass("bottom_to_top2");
         }
@@ -1155,12 +1206,41 @@
       });
       var asd = 0;
       var winScrollHeight;
-      $(document).scroll(function () {
-        winScrollHeight = $(window).scrollTop() + asd;
-        console.log(winScrollHeight);
-        $(window).scrollTop(winScrollHeight / 2);
-        asd = winScrollHeight / 2;
+      $(document).on("mousewheel", function (event) {
+        console.log(event);
+        const winScrollHeight =
+          $(window).scrollTop() - event.originalEvent.wheelDeltaY * 0.2;
+        // console.log(winScrollHeight);
+        $(window).scrollTop(winScrollHeight);
+        // asd = winScrollHeight / 2;
+        // event.preventDefault();
       });
+
+      {
+        function preventDefault(e) {
+          e.preventDefault();
+        }
+
+        // modern Chrome requires { passive: false } when adding event
+        var supportsPassive = false;
+        try {
+          window.addEventListener(
+            "test",
+            null,
+            Object.defineProperty({}, "passive", {
+              get: function () {
+                supportsPassive = true;
+              },
+            })
+          );
+        } catch (e) {}
+
+        var wheelOpt = supportsPassive ? { passive: false } : false;
+        var wheelEvent =
+          "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+
+        window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+      }
     });
   </script>
 </html>
