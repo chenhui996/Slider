@@ -1405,13 +1405,14 @@ i {
   width: 126px;
   background-image: url(./image/logo_white.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 37px;
 }
 .nav_text_box {
   justify-content: flex-end;
   align-items: center;
   display: flex;
+  font-size: 16px;
 }
 .nav_text {
   text-decoration: none;
@@ -1442,14 +1443,23 @@ i {
   font-size: 14px;
   margin-right: 5px;
 }
-.guide_arrow {
-  width: 19px;
-  height: 42px;
+.guide_box{
   position: absolute;
   bottom: 4vh;
   left: 4vh;
-  background-image: url(./image/arrow.png);
   z-index: 100;
+}
+.guide_box p{
+  margin-top: 16px;
+  color:#ccc;
+  font-family: Gotham-Bold;
+  position: relative;
+  left: -14px;
+}
+.guide_arrow {
+  width: 19px;
+  height: 42px;
+  background-image: url(./image/arrow.png);
 }
 
 .slide_sub_data {
@@ -2094,6 +2104,7 @@ h6 {
   border-radius: 100px;
   padding: 14px 50px;
   border: 1px solid #3b3c44;
+  text-decoration: none;
 }
 .news_btn_more:hover {
   background-color: #3b3c44;
@@ -2116,7 +2127,7 @@ h6 {
   width: 126px;
   background-image: url(./image/logo_white.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 37px;
 }
 .foot_txt_box {
