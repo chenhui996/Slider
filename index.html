@@ -1153,14 +1153,14 @@
           $(".five_txt_anime").addClass("bottom_to_top2");
         }
       });
-      // var asd = 0;
-      // var winScrollHeight;
-      // $(document).scroll(function () {
-      //   winScrollHeight = $(window).scrollTop() + asd;
-      //   console.log(winScrollHeight);
-      //   $(window).scrollTop(winScrollHeight / 2);
-      //   asd = winScrollHeight / 2;
-      // });
+      var asd = 0;
+      var winScrollHeight;
+      $(document).scroll(function () {
+        winScrollHeight = $(window).scrollTop() + asd;
+        console.log(winScrollHeight);
+        $(window).scrollTop(winScrollHeight / 2);
+        asd = winScrollHeight / 2;
+      });
     });
   </script>
 </html>
