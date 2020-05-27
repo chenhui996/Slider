@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link id="zz" type="text/css" href="http://o3bnyc.creatby.com/diazo/c-built/player/coolsite.built.48972d26.cache.css" rel="stylesheet" media="all">
+  </head>
+  <body>
+    <script>
+      function removeCss(href) {
+        var links = document.getElementsByTagName("link");
+        for (var i = 0; i < links.length; i++) {
+          var _href = links[i].href;
+          if (links[i] && links[i].href && links[i].href.indexOf(href) != -1) {
+            links[i].parentNode.removeChild(links[i]);
+          }
+        }
+      }
+      removeCss("http://o3bnyc.creatby.com/diazo/c-built/player/coolsite.built.48972d26.cache.css");
+    </script>
+  </body>
+</html>
